@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Danelle Hall | Cybersecurity Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Header / Hero Section -->
+  <header>
+    <div class="hero">
+  <h1>Hi, I’m <span>Danelle Hall</span></h1>
+      <p>Aspiring Cybersecurity Professional | Portfolio & Resume</p>
+      <a href="#contact" class="btn">Get In Touch</a>
+    </div>
+  </header>
+
+  <!-- Navigation -->
+  <nav>
+    <a href="#about">About</a>
+    <a href="#resume">Resume</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <!-- About Section -->
+  <section id="about">
+    <h2>About Me</h2>
+    <p>
+      I’m an entry-level cybersecurity enthusiast focused on building skills in 
+      network defense, penetration testing, and security operations. 
+      Currently pursuing certifications (Fortinet NSE, CompTIA Security+), and 
+      applying my knowledge through labs, capture-the-flag challenges, and real-world projects.
+    </p>
+  </section>
+
+  <!-- Resume Section -->
+  <section id="resume">
+    <h2>Resume</h2>
+    <div class="resume-box">
+      <h3>Education</h3>
+      <p>High School Graduate (2024)<br>
+      Pursuing certifications: Fortinet NSE, CompTIA Security+</p>
+
+      <h3>Skills</h3>
+      <ul>
+        <li>Networking & Security Fundamentals</li>
+        <li>Linux & Command Line Tools</li>
+        <li>Python Scripting</li>
+        <li>Threat Detection & SIEM Basics</li>
+        <li>Problem Solving & Incident Response</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="projects-grid">
+      <div class="card">
+        <h3>TryHackMe Labs</h3>
+        <p>Documenting progress through beginner-to-intermediate cybersecurity challenges.</p>
+      </div>
+      <div class="card">
+        <h3>Fortinet NSE Training</h3>
+        <p>Completed NSE 1–4 with focus on network security fundamentals and FortiGate firewalls.</p>
+      </div>
+      <div class="card">
+        <h3>Python Scripts</h3>
+        <p>Built small automation tools for file organization and network scanning.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact">
+    <h2>Contact Me</h2>
+  <p>Email: <a href="mailto:dmicquealhall@outlook.com">dmicquealhall@outlook.com</a></p>
+  <p>LinkedIn: <a href="https://www.linkedin.com/in/danelle-hall-77944130b" target="_blank">linkedin.com/in/danelle-hall-77944130b</a></p>
+  <p>GitHub: <a href="https://github.com/ThePoetSKL" target="_blank">github.com/ThePoetSKL</a></p>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+  <p>© 2025 Danelle Hall | Built with ❤️ | Hosted on GitHub Pages</p>
+  </footer>
+</body>
+</html>
