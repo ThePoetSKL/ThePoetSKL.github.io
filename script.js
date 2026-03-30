@@ -41,9 +41,9 @@
     draw(){
       ctx.beginPath();
       const g = ctx.createRadialGradient(this.x, this.y, 0, this.x, this.y, this.r*6);
-      g.addColorStop(0, 'rgba(32,244,255,0.9)');
-      g.addColorStop(0.35, 'rgba(32,244,255,0.25)');
-      g.addColorStop(1, 'rgba(32,244,255,0)');
+      g.addColorStop(0, 'rgba(255,255,255,0.88)');
+      g.addColorStop(0.35, 'rgba(255,255,255,0.3)');
+      g.addColorStop(1, 'rgba(255,255,255,0)');
       ctx.fillStyle = g;
       ctx.arc(this.x, this.y, this.r*4, 0, Math.PI*2);
       ctx.fill();
@@ -62,7 +62,7 @@
         const d = Math.sqrt(dx*dx+dy*dy);
         if(d<maxDist){
           const alpha = 1 - d/maxDist;
-          ctx.strokeStyle = `rgba(32,244,255,${0.09*alpha})`;
+          ctx.strokeStyle = `rgba(220,220,220,${0.12*alpha})`;
           ctx.lineWidth = 1*alpha;
           ctx.beginPath();
           ctx.moveTo(a.x, a.y);
@@ -75,7 +75,7 @@
       const md = Math.hypot(a.x-mouse.x, a.y-mouse.y);
       if(md < 160){
         const alpha = 1 - md/160;
-        ctx.strokeStyle = `rgba(255,102,184,${0.06*alpha})`;
+        ctx.strokeStyle = `rgba(220,220,220,${0.08*alpha})`;
         ctx.beginPath();
         ctx.moveTo(a.x, a.y);
         ctx.lineTo(mouse.x, mouse.y);
@@ -93,7 +93,7 @@
       const s = rand(1.8, 6);
       this.vx = Math.cos(ang)*s; this.vy = Math.sin(ang)*s;
       this.life = rand(40,80); this.age=0; this.r = rand(1,3);
-      this.color = Math.random() > 0.5 ? 'rgba(32,244,255,' : 'rgba(255,102,184,';
+      this.color = 'rgba(255,255,255,';
     }
     step(){
       this.x += this.vx; this.y += this.vy; this.vy += 0.03; this.age++;
@@ -111,8 +111,8 @@
 
     // subtle background gradient
     const g = ctx.createLinearGradient(0,0,W,H);
-    g.addColorStop(0,'rgba(5,6,10,0.95)');
-    g.addColorStop(1,'rgba(11,15,26,0.95)');
+    g.addColorStop(0,'rgba(0,0,0,0.95)');
+    g.addColorStop(1,'rgba(24,24,24,0.95)');
     ctx.fillStyle = g; ctx.fillRect(0,0,W,H);
 
     // step and draw nodes
@@ -129,7 +129,15 @@
   animate();
 
   // responsiveness
-  function resize(){ W = canvas.width = innerWidth; H = canvas.height = innerHeight; canvas.width = W * DPR; canvas.height = H * DPR; canvas.style.width = W + 'px'; canvas.style.height = H + 'px'; ctx.scale(DPR, DPR); }
+  function resize(){
+    W = innerWidth;
+    H = innerHeight;
+    canvas.width = W * DPR;
+    canvas.height = H * DPR;
+    canvas.style.width = W + 'px';
+    canvas.style.height = H + 'px';
+    ctx.setTransform(DPR, 0, 0, DPR, 0, 0);
+  }
   addEventListener('resize', ()=>{ // debounce
     setTimeout(()=>{ resize(); },120);
   });
